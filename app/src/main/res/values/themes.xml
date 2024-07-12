@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.HelloCookBook" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.Light.ActionBar" parent="Theme.AppCompat.Light" />
+
+    <style name="Theme.HelloCookBook" parent="Base.Theme.HelloCookBook" />
+</resources>
