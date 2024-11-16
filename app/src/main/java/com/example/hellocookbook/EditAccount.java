@@ -82,7 +82,7 @@ public class EditAccount extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(EditAccount.this);
 
         // API call for updating an account
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT, "http://192.168.1.253:80/user/edit", requestBody, response -> {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT, this.getString(R.string.api_url) + "user/edit", requestBody, response -> {
             Result result = new Result();
 
             try {

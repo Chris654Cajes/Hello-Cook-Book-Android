@@ -78,7 +78,7 @@ public class ViewProcedures extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(ViewProcedures.this);
 
         // API call for getting all the procedures from the recipe
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, "http://192.168.1.253:80/procedure/recipe/" + recipeId,  null, response ->  {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, this.getString(R.string.api_url) + "procedure/recipe/" + recipeId,  null, response ->  {
             try {
                 procedures = new ArrayList<Procedure>();
 

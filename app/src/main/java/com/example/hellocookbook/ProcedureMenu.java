@@ -99,7 +99,7 @@ public class ProcedureMenu extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(ProcedureMenu.this);
 
         // API call for deleting a procedure
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.DELETE, "http://192.168.1.253:80/procedure/delete/" + procedureId, null, response -> {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.DELETE, this.getString(R.string.api_url) + "procedure/delete/" + procedureId, null, response -> {
             Result result = new Result();
 
             try {

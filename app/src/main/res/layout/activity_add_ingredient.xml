@@ -34,16 +34,16 @@
                 android:textColor="@color/green" />
 
             <EditText
+                android:id="@+id/txt_ingredient"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:id="@+id/txt_ingredient"
-                android:background="@drawable/custom_edittext"
                 android:layout_marginTop="30dp"
-                android:padding="8dp"
-                android:hint="Enter your ingredient"
+                android:background="@drawable/custom_edittext"
+                android:backgroundTint="@color/white"
                 android:drawablePadding="8dp"
-                android:singleLine="true"
-                android:backgroundTint="@color/white"/>
+                android:hint="Enter your ingredient"
+                android:padding="8dp"
+                android:singleLine="true" />
 
             <EditText
                 android:layout_width="match_parent"

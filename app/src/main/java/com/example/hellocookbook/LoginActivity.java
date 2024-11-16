@@ -89,7 +89,7 @@ public class LoginActivity extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(LoginActivity.this);
 
         // API call for check if the user exists in the database and logged in to main if exists
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, "http://192.168.1.253:80/user/login", requestBody, response -> {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, this.getString(R.string.api_url) + "user/login", requestBody, response -> {
             Result result = new Result();
 
             // Validation of forms that should be completed in order for function to succeed

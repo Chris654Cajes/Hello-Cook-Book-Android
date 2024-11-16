@@ -178,7 +178,7 @@ public class AddRecipe extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(AddRecipe.this);
 
         // API call for getting a recipe
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, "http://192.168.1.253:80/recipe/" + recipeId,  null, response ->  {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, this.getString(R.string.api_url) + "recipe/" + recipeId,  null, response ->  {
             Result result = new Result();
 
             try {
@@ -227,7 +227,7 @@ public class AddRecipe extends AppCompatActivity {
         }
 
         // Checks whether add or edit a recipe
-        String requestURL = recipe.getId() > 0 ? "http://192.168.1.253:80/recipe/edit" : "http://192.168.1.253:80/recipe/add";
+        String requestURL = recipe.getId() > 0 ? this.getString(R.string.api_url) + "recipe/edit" : this.getString(R.string.api_url) + "recipe/add";
         int requestMethod = recipe.getId() > 0 ? Request.Method.PUT : Request.Method.POST;
 
         RequestQueue requestQueue = Volley.newRequestQueue(AddRecipe.this);

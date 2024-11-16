@@ -80,7 +80,7 @@ public class SignUp extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(SignUp.this);
 
         // API call for adding the new user to database
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, "http://192.168.1.253:80/user/add", requestBody, response -> {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, this.getString(R.string.api_url) + "user/add", requestBody, response -> {
             Result result = new Result();
 
             // Validation of forms that should be completed in order for function to succeed

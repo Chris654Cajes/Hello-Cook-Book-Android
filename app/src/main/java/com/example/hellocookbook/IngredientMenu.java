@@ -103,7 +103,7 @@ public class IngredientMenu extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(IngredientMenu.this);
 
         // API call for deleting an ingredient
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.DELETE, "http://192.168.1.253:80/ingredient/delete/" + ingredientId, null, response -> {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.DELETE, this.getString(R.string.api_url) + "ingredient/delete/" + ingredientId, null, response -> {
             Result result = new Result();
 
             try {

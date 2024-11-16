@@ -79,7 +79,7 @@ public class ViewIngredients extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(ViewIngredients.this);
 
         // API call for getting all the ingredients from the recipe
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, "http://192.168.1.253:80/ingredient/recipe/" + recipeId,  null, response ->  {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, this.getString(R.string.api_url) + "ingredient/recipe/" + recipeId,  null, response ->  {
             try {
                 ingredients = new ArrayList<Ingredient>();
 

@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(MainActivity.this);
 
         // API call for check if the user exists in the database and store user data
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, "http://192.168.1.253:80/user/login", requestBody, response -> {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, this.getString(R.string.api_url) + "user/login", requestBody, response -> {
             Result result = new Result();
 
             try {
@@ -252,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(MainActivity.this);
 
         // API call for getting all the recipes of the user
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, "http://192.168.1.253:80/recipe/user/" + userId + "/" + recipe,  null, response ->  {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, this.getString(R.string.api_url) + "recipe/user/" + userId + "/" + recipe,  null, response ->  {
             try {
                 ArrayList<Recipe> recipes = new ArrayList<Recipe>();
 

@@ -75,7 +75,7 @@ public class AddProcedure extends AppCompatActivity {
         }
 
         // Checks whether add or edit a procedure
-        String requestURL = procedure.getId() > 0 ? "http://192.168.1.253:80/procedure/edit" : "http://192.168.1.253:80/procedure/add";
+        String requestURL = procedure.getId() > 0 ? this.getString(R.string.api_url) + "procedure/edit" : this.getString(R.string.api_url) + "procedure/add";
         int requestMethod = procedure.getId() > 0 ? Request.Method.PUT : Request.Method.POST;
 
         RequestQueue requestQueue = Volley.newRequestQueue(AddProcedure.this);

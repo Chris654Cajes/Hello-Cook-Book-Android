@@ -81,7 +81,7 @@ public class AddIngredient extends AppCompatActivity {
         }
 
         // Checks whether add or edit an ingredient
-        String requestURL = ingredient.getId() > 0 ? "http://192.168.1.253:80/ingredient/edit" : "http://192.168.1.253:80/ingredient/add";
+        String requestURL = ingredient.getId() > 0 ? this.getString(R.string.api_url) + "ingredient/edit" : this.getString(R.string.api_url) + "ingredient/add";
         int requestMethod = ingredient.getId() > 0 ? Request.Method.PUT : Request.Method.POST;
 
         RequestQueue requestQueue = Volley.newRequestQueue(AddIngredient.this);

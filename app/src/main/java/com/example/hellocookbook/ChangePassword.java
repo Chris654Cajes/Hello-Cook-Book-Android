@@ -75,7 +75,7 @@ public class ChangePassword extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(ChangePassword.this);
 
         // API call for changing the password
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT, "http://192.168.1.253:80/user/changePassword", requestBody, response -> {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT, this.getString(R.string.api_url) + "user/changePassword", requestBody, response -> {
             Result result = new Result();
 
             // Validation of forms that should be completed in order for function to succeed

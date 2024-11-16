@@ -130,7 +130,7 @@ public class RecipeMenu extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(RecipeMenu.this);
 
         // API call for getting a recipe
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, "http://192.168.1.253:80/recipe/" + recipeId,  null, response ->  {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, this.getString(R.string.api_url) + "recipe/" + recipeId,  null, response ->  {
             try {
                 Result result = new Result();
 
@@ -166,7 +166,7 @@ public class RecipeMenu extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(RecipeMenu.this);
 
         // API call for deleting a recipe
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.DELETE, "http://192.168.1.253:80/recipe/delete/" + recipeId, null, response -> {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.DELETE, this.getString(R.string.api_url) + "recipe/delete/" + recipeId, null, response -> {
             Result result = new Result();
 
             try {
